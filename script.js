@@ -30,10 +30,7 @@ const validate = (nameValue, urlValue) => {
         return false;
     }
 
-    if(urlValue.match(regex)) {
-        alert('match');
-    }
-    else {
+    if(!urlValue.match(regex)){
         alert('Invalid URL! Falied to save bookmark.');
         return false;
     }
