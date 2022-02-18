@@ -4,15 +4,11 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Template</title>
+        <title>Bookmarks</title>
         <!-- My CSS -->
         <link rel="stylesheet" href="style.css" />
         <!-- Favicon -->
-        <link
-            rel="icon"
-            type="img/png"
-            href="https://www.google.com/s2/u/0/favicons?domain=css-tricks.com"
-        />
+        <link rel="icon" type="img/png" href="favicon.ico" />
         <!-- FontAwesome -->
         <link
             rel="stylesheet"
@@ -23,7 +19,71 @@
         />
     </head>
     <body>
-        <h1>Hello World!</h1>
+        <!-- Open Modal -->
+        <h1 id="show-modal">Add Bookmark</h1>
+
+        <!-- Bookmarks -->
+        <div class="container" id="bookmarks-container">
+            <div class="item" id="delete-bookmark" title="Delete Bookmark">
+                <i class="fa-solid fa-xmark"></i>
+                <div class="name">
+                    <img src="favicon.ico" alt="Favicon" />
+                    <a href="http://www.mattruetz.com" target="_blank"
+                        >My Site</a
+                    >
+                </div>
+            </div>
+            <div class="item" id="delete-bookmark" title="Delete Bookmark">
+                <i class="fa-solid fa-xmark"></i>
+                <div class="name">
+                    <img src="favicon.ico" alt="Favicon" />
+                    <a href="http://google.com" target="_blank">Google.com</a>
+                </div>
+            </div>
+            <div class="item" id="delete-bookmark" title="Delete Bookmark">
+                <i class="fa-solid fa-xmark"></i>
+                <div class="name">
+                    <img src="favicon.ico" alt="Favicon" />
+                    <a href="www.mattruetz.com" target="_blank">My Site</a>
+                </div>
+            </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal-container show-modal" id="modal">
+            <div class="modal">
+                <i class="fa-solid fa-xmark close-icon" id="close-modal"></i>
+                <div class="modal-header">
+                    <h3>Add Bookmark</h3>
+                </div>
+                <div class="modal-content">
+                    <form id="bookmark-form">
+                        <!-- Site name -->
+                        <div class="form-group">
+                            <label for="website-name" class="form-label"
+                                >Website Name</label
+                            >
+                            <input
+                                type="text"
+                                class="form-input"
+                                id="website-name"
+                            />
+                        </div>
+                        <!-- Site URL -->
+                        <div class="form-group">
+                            <label for="website-url" class="form-label"
+                                >Website URL</label
+                            >
+                            <input
+                                type="text"
+                                class="form-input"
+                                id="website-url"
+                            />
+                        </div>
+                        <button type="submit">Save</button>
+                    </form>
+                </div>
+            </div>
+        </div>
         <!-- Script -->
         <script src="script.js"></script>
     </body>
